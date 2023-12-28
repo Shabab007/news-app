@@ -7,23 +7,24 @@ import styles from './styles/layout.module.css'
 import './styles/globals.css'
 import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry'
 import AppBarHeader from './components/AppBar/AppBar'
+import { Container } from '@mui/material'
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <Providers>
       <html lang='en'>
         <body>
-          {/* <section className={styles.container}> */}
-          {/* <Nav />
+          <Container maxWidth='xl'>
+            {/* <Nav />
 
             <header className={styles.header}>
               <img src="/logo.svg" className={styles.logo} alt="logo" />
             </header> */}
-          <ThemeRegistry options={{ key: 'mui-theme' }}>
-            <AppBarHeader />
-            {props.children}
-          </ThemeRegistry>
-          {/* <footer className={styles.footer}>
+            <ThemeRegistry options={{ key: 'mui-theme' }}>
+              <AppBarHeader />
+              <main>{props.children}</main>
+            </ThemeRegistry>
+            {/* <footer className={styles.footer}>
               <span>Learn </span>
               <a
                 className={styles.link}
@@ -61,7 +62,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
                 React Redux
               </a>
             </footer> */}
-          {/* </section> */}
+          </Container>
         </body>
       </html>
     </Providers>

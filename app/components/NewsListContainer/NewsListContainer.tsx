@@ -1,6 +1,6 @@
 'use client'
 import { useGetAllNewsQuery } from '@/lib/redux/slices/newsSlice/newsApiQuery'
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Skeleton, Stack } from '@mui/material'
 import React from 'react'
 import NewsCard from '../NewsCard/NewsCard'
 
@@ -9,19 +9,41 @@ const NewsListContainer = () => {
     { q: 'bitcoin', page: 1, pageSize: 30 },
     { refetchOnMountOrArgChange: true },
   )
-  console.log(data)
+  if (isLoading) {
+    return (
+      <>
+        <Grid container gap={2} justifyContent={'center'} padding={2}>
+          {[...Array(20).keys()].map((item) => {
+            console.log(item)
+            return (
+              <Grid key={item}>
+                <Stack spacing={1}>
+                  <Skeleton variant='rectangular' width={345} height={150} />
+                  <Skeleton variant='rectangular' width={345} height={80} />
+                </Stack>
+              </Grid>
+            )
+          })}
+        </Grid>
+      </>
+    )
+  }
   return (
-    <Box>
-      <Grid container spacing={4}>
-        {data?.articles.map((item: any) => {
-          return (
-            <Grid key={item.id}>
-              <NewsCard image={item.urlToImage} title={item.title} date={item.publishedAt} />
-            </Grid>
-          )
-        })}
-      </Grid>
-    </Box>
+    <Grid container gap={2} justifyContent={'center'} padding={2}>
+      {data?.articles.map((item: any, index: number) => {
+        console.log(item)
+        return (
+          <Grid key={index} xs={12} sm={11.5} md={5.5} lg={5.5} xl={3.5}>
+            <NewsCard
+              image={item.urlToImage}
+              middle={index % 2 !== 0}
+              title={item.title}
+              date={item.publishedAt}
+            />
+          </Grid>
+        )
+      })}
+    </Grid>
   )
 }
 
