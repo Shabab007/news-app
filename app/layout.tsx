@@ -6,6 +6,7 @@ import { Nav } from './components/Nav'
 import styles from './styles/layout.module.css'
 import './styles/globals.css'
 import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry'
+import AppBarHeader from './components/AppBar/AppBar'
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
@@ -18,7 +19,10 @@ export default function RootLayout(props: React.PropsWithChildren) {
             <header className={styles.header}>
               <img src="/logo.svg" className={styles.logo} alt="logo" />
             </header> */}
-          <ThemeRegistry options={{ key: 'mui-theme' }}>{props.children}</ThemeRegistry>
+          <ThemeRegistry options={{ key: 'mui-theme' }}>
+            <AppBarHeader />
+            {props.children}
+          </ThemeRegistry>
           {/* <footer className={styles.footer}>
               <span>Learn </span>
               <a
