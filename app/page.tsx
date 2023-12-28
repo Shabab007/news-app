@@ -1,13 +1,15 @@
 /* Components */
-import { Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import { Counter } from './components/Counter/Counter'
+import NewsListContainer from './components/NewsListContainer/NewsListContainer'
 
 export default function IndexPage() {
   return (
-    <div>
-      <Typography variant='h1'>Mui </Typography>
+    <Container>
+      {/* <Typography variant='h1'>Mui </Typography> */}
       {/* <Counter /> */}
-    </div>
+      <NewsListContainer />
+    </Container>
   )
 }
 
