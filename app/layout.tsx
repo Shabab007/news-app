@@ -5,22 +5,21 @@ import { Nav } from './components/Nav'
 /* Instruments */
 import styles from './styles/layout.module.css'
 import './styles/globals.css'
+import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry'
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <Providers>
-      <html lang="en">
+      <html lang='en'>
         <body>
-          <section className={styles.container}>
-            <Nav />
+          {/* <section className={styles.container}> */}
+          {/* <Nav />
 
             <header className={styles.header}>
               <img src="/logo.svg" className={styles.logo} alt="logo" />
-            </header>
-
-            <main className={styles.main}>{props.children}</main>
-
-            <footer className={styles.footer}>
+            </header> */}
+          <ThemeRegistry options={{ key: 'mui-theme' }}>{props.children}</ThemeRegistry>
+          {/* <footer className={styles.footer}>
               <span>Learn </span>
               <a
                 className={styles.link}
@@ -57,8 +56,8 @@ export default function RootLayout(props: React.PropsWithChildren) {
               >
                 React Redux
               </a>
-            </footer>
-          </section>
+            </footer> */}
+          {/* </section> */}
         </body>
       </html>
     </Providers>
