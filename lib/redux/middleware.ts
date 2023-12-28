@@ -1,7 +1,9 @@
 /* Core */
 import { createLogger } from 'redux-logger'
+import { NewsApi } from './slices/newsSlice/newsApiQuery'
 
 const middleware = [
+  NewsApi.middleware,
   createLogger({
     duration: true,
     timestamp: false,

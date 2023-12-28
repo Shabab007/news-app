@@ -9,6 +9,7 @@ import {
 /* Instruments */
 import { reducer } from './rootReducer'
 import { middleware } from './middleware'
+import { setupListeners } from '@reduxjs/toolkit/dist/query'
 
 export const reduxStore = configureStore({
   reducer,
@@ -16,6 +17,7 @@ export const reduxStore = configureStore({
     return getDefaultMiddleware().concat(middleware)
   },
 })
+setupListeners(reduxStore.dispatch)
 export const useDispatch = () => useReduxDispatch<ReduxDispatch>()
 export const useSelector: TypedUseSelectorHook<ReduxState> = useReduxSelector
 
