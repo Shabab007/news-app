@@ -2,14 +2,17 @@
 import { Typography } from '@mui/material'
 import { Counter } from './components/Counter/Counter'
 import NewsListContainer from './components/NewsListContainer/NewsListContainer'
+import { Suspense } from 'react'
 
 export default function IndexPage() {
   return (
-    <div>
+    <>
       {/* <Typography variant='h1'>Mui </Typography> */}
       {/* <Counter /> */}
-      <NewsListContainer />
-    </div>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <NewsListContainer />
+      </Suspense>
+    </>
   )
 }
 
