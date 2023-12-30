@@ -28,6 +28,10 @@ const LoadMore = () => {
     }
   }
   useEffect(() => {
+    setData([])
+    setPage(2)
+  }, [searchInput, category])
+  useEffect(() => {
     if (inView) {
       handleFetch()
     }
