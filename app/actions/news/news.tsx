@@ -1,5 +1,3 @@
-'use server'
-
 import { getQueryStringFromObject } from '@/utils/helpers/helpers'
 import { FetchNewsParams } from './types'
 
@@ -17,9 +15,6 @@ export const fetchNews = async (params: FetchNewsParams) => {
   console.log(url)
   const response = await fetch(url)
   const data = await response.json()
-  if (!data) {
-    throw new Error('Failed to fetch data from news api')
-  }
 
   return data?.articles
 }

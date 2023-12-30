@@ -1,14 +1,28 @@
+'use client'
 import { useGetAllNewsQuery } from '@/lib/redux/slices/newsSlice/newsApiQuery'
 import { Box, Container, Grid, Skeleton, Stack } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NewsCard from '../NewsCard/NewsCard'
 import { fetchNews } from '@/app/actions/news/news'
 import LoadMore from '../LoadMore/LoadMore'
 import { NewsCategory } from '@/app/actions/news/types'
 import NewsMapper from '../NewsMapper/NewsMapper'
+import { selectSearchInput, selectedCategory } from '@/lib/redux/slices/newsSlice'
+import { useSelector } from '@/lib/redux'
 
-const NewsListContainer = async () => {
-  const data = await fetchNews({ page: 1, pageSize: 20 })
+const NewsListContainer = () => {
+  const [data, setData] = useState([])
+  const searchInput = useSelector(selectSearchInput)
+  const category = useSelector(selectedCategory)
+
+  const handleFetch = async () => {
+    const res = await fetchNews({ q: searchInput, category, page: 1, pageSize: 20 })
+    setData(res)
+  }
+  useEffect(() => {
+    handleFetch()
+  }, [searchInput, category])
+
   // return <h1>hkj</h1>
   // const { data, isError, isLoading } = useGetAllNewsQuery(
   //   { q: 'bitcoin', page: 1, pageSize: 30 },
@@ -19,7 +33,6 @@ const NewsListContainer = async () => {
   //     <>
   //       <Grid container gap={2} justifyContent={'center'} padding={2}>
   //         {[...Array(20).keys()].map((item) => {
-  //           console.log(item)
   //           return (
   //             <Grid key={item}>
   //               <Stack spacing={1}>

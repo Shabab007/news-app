@@ -18,7 +18,7 @@ export const newsSlice = createSlice({
       state.serachInput = action.payload
     },
     setSelectedCategory: (state, action: PayloadAction<NewsCategory>) => {
-      state.serachInput = action.payload
+      state.slectedCategory = action.payload
     },
     selectNews: (state, action: PayloadAction<Articles>) => {
       state.selectedNews = action.payload

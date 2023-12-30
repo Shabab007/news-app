@@ -1,6 +1,6 @@
 export enum NewsCategory {
-  ENTERTAINMENT = 'entertainment',
   GENERAL = 'general',
+  ENTERTAINMENT = 'entertainment',
   BUSINES = 'business',
   SPORTS = 'sports',
 }
