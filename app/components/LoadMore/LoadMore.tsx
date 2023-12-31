@@ -1,10 +1,15 @@
 'use client'
+import { fetchNews } from '@/app/actions/news/news'
 import { Box, CircularProgress, Grid, Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import NewsMapper from '../NewsMapper/NewsMapper'
+import { useSelector } from '@/lib/redux'
+import { selectSearchInput, selectedCategory } from '@/lib/redux/slices/newsSlice'
 import useLoadMore from './hooks'
 
 const LoadMore = () => {
-  const { data, end, ref } = useLoadMore()
+  const { data, ref, end } = useLoadMore()
 
   return (
     <>
