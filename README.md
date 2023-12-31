@@ -1,6 +1,6 @@
 # InsideNews App
 
-This is a [Next.js](https://nextjs.org/), [Material Ui](https://mui.com/material-ui/),[Redux Toolkit][https://redux-toolkit.js.org/] news fetching app. Version 1 is based on Next App 14 directory with [react-intersection-observer](https://react-intersection-observer.vercel.app/?path=/docs/intro--docs) and uses [Framer motion](https://www.framer.com/motion/) to add animation in displaying card.
+This is a [Next.js](https://nextjs.org/), [Material Ui](https://mui.com/material-ui/),[Redux Toolkit](https://redux-toolkit.js.org/) news fetching app. Version 1 is based on Next App 14 directory with [react-intersection-observer](https://react-intersection-observer.vercel.app/?path=/docs/intro--docs) and uses [Framer motion](https://www.framer.com/motion/) to add animation in displaying card.
 
 Check out the documentation below to get started.
 
