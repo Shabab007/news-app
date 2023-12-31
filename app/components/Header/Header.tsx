@@ -16,7 +16,7 @@ export default function DrawerAppBar() {
             component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            InsideNews
+            Inside<span style={{ color: '#4DABF5' }}>News</span>
           </Typography>
           <SearchInput />
         </Toolbar>
