@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import Link from 'next/link'
 
 const NotFoundPage = () => {

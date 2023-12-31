@@ -8,7 +8,6 @@ import {
   CardContent,
   CardMedia,
   Grid,
-  Stack,
   Typography,
 } from '@mui/material'
 import Link from 'next/link'
@@ -20,7 +19,12 @@ const NewsDetails = (props: Props) => {
   return (
     <Card>
       <CardActionArea>
-        <CardMedia component='img' image={displayImgae} alt='green iguana' />
+        <CardMedia
+          sx={{ maxHeight: '50vh' }}
+          component='img'
+          image={displayImgae}
+          alt='green iguana'
+        />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
             {news.title}

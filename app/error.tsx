@@ -1,13 +1,7 @@
 'use client'
 import { Button, Container, Typography } from '@mui/material'
-import { useRouter } from 'next/router'
 
 const Error = () => {
-  const handleReturnHome = () => {
-    const router = useRouter()
-
-    router.push('/') // Navigate to the home page
-  }
   return (
     <Container
       maxWidth='sm'
@@ -26,9 +20,7 @@ const Error = () => {
       <Typography variant='h4' gutterBottom>
         We couldn't load the requested data.
       </Typography>
-      <Button variant='contained' color='primary' onClick={handleReturnHome}>
-        Return to Home
-      </Button>
+      <Typography>Please try again</Typography>
     </Container>
   )
 }

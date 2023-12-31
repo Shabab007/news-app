@@ -2,10 +2,10 @@
 import React from 'react'
 import NewsDetails from '../NewsDetails/NewsDetails'
 import { Box, Grid, Stack, Typography } from '@mui/material'
-import { Articles } from '@/lib/redux/slices/newsSlice/types'
 import { Close } from '@mui/icons-material'
+import { ModalContentProps } from './types'
 
-const ModalContent = (props: { slectedNews: Articles; title: string; handleClose: () => void }) => {
+const ModalContent = (props: ModalContentProps) => {
   const { slectedNews, title, handleClose } = props
   return (
     <Box

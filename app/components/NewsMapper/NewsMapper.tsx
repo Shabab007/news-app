@@ -45,7 +45,7 @@ const NewsMapper = (props: Porps) => {
             xl={3.5}
             onClick={() => handleCard(item)}
           >
-            <NewsCard index={index} news={item} middle={index % 2 !== 0} />
+            <NewsCard index={index} news={item} />
           </Grid>
         )
       })}
