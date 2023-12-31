@@ -1,5 +1,5 @@
 'use client'
-import { Container, Grid, Skeleton, Stack } from '@mui/material'
+import { Grid, Skeleton, Stack } from '@mui/material'
 import React from 'react'
 import LoadMore from '../LoadMore/LoadMore'
 import NewsMapper from '../NewsMapper/NewsMapper'
