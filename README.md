@@ -1,6 +1,6 @@
 # InsideNews App
 
-This is a [Next.js](https://nextjs.org/), [Material Ui](https://mui.com/material-ui/),[Redux Toolkit][https://redux-toolkit.js.org/] news fetching app. Version 1 is based on Next App 14 directory with [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) and uses [Framer motion](https://www.framer.com/motion/) to add animation in displaying card.
+This is a [Next.js](https://nextjs.org/), [Material Ui](https://mui.com/material-ui/),[Redux Toolkit][https://redux-toolkit.js.org/] news fetching app. Version 1 is based on Next App 14 directory with [react-intersection-observer](https://react-intersection-observer.vercel.app/?path=/docs/intro--docs) and uses [Framer motion](https://www.framer.com/motion/) to add animation in displaying card.
 
 Check out the documentation below to get started.
 
@@ -15,7 +15,7 @@ Check out the documentation below to get started.
 - Easy styling customization with Css and primary color attribute
 - [Redux Toolkit][https://redux-toolkit.js.org/] for manging the state
 - Card animation render with [Framer motion](https://www.framer.com/motion/)
-- Infinite scroll functionlity with implemnting [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) package
+- Infinite scroll functionlity with [react-intersection-observer](https://react-intersection-observer.vercel.app/?path=/docs/intro--docs) package
 - SearchBar with debounce effiecient searching
 - Categorywise and searchwise data fetching
 - Category tab to choose between news category
