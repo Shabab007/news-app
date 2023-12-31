@@ -8,11 +8,13 @@ import { genrateCategoryTabs } from './components/CategoryTabs/tabs'
 export default function IndexPage() {
   return (
     <>
-      <Stack direction={'row'} justifyContent={'space-between'} padding={'1rem'}>
-        <CategoryTabs tabs={genrateCategoryTabs()} />
-        <ReadLater />
+      <Stack direction={'row'}>
+        <Stack justifyContent={'flex-start'} alignItems={'center'} padding={'1rem'}>
+          <CategoryTabs tabs={genrateCategoryTabs()} />
+          <ReadLater />
+        </Stack>
+        <NewsListContainer />
       </Stack>
-      <NewsListContainer />
     </>
   )
 }
