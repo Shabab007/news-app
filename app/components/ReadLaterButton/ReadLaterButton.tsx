@@ -9,8 +9,12 @@ const ReadLaterButton = (props: Props) => {
   const { handleClick, readLater } = useReadLater(news)
 
   return (
-    <Button variant={readLater ? 'contained' : 'outlined'} color='primary' onClick={handleClick}>
-      {readLater ? 'Added to Read Later' : 'Read Later'}
+    <Button
+      variant={readLater ? 'contained' : 'outlined'}
+      color={readLater ? 'error' : 'primary'}
+      onClick={handleClick}
+    >
+      {readLater ? 'Remove from Read Later' : 'Read Later'}
     </Button>
   )
 }

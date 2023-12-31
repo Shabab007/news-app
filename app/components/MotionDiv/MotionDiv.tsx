@@ -2,13 +2,9 @@
 
 import { Card } from '@mui/material'
 import { motion } from 'framer-motion'
-import { MouseEventHandler } from 'react'
+import { MotionCardProps } from './types'
 
-const MotionCard = (props: {
-  children: React.ReactNode
-  index?: number
-  onClick?: MouseEventHandler<HTMLDivElement> | undefined
-}) => {
+const MotionCard = (props: MotionCardProps) => {
   const { index, children, onClick } = props
   const variants = {
     hidden: { opacity: 0 },

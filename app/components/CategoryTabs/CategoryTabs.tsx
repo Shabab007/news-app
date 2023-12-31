@@ -3,11 +3,11 @@ import React from 'react'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
-import { NewsCategory } from '@/app/actions/news/types'
 import useCategory from './hooks'
-import { genrateCategoryTabs } from './tabs'
+import { Props } from './types'
 
-export default function CategoryTabs() {
+export default function CategoryTabs(props: Props) {
+  const { tabs } = props
   const { handleChange, value } = useCategory()
 
   return (
@@ -17,7 +17,7 @@ export default function CategoryTabs() {
         value={value}
         aria-label='Tabs where each tab needs to be selected manually'
       >
-        {genrateCategoryTabs().map((item) => {
+        {tabs.map((item) => {
           return <Tab key={item.key} value={item.value} label={item.key} />
         })}
       </Tabs>

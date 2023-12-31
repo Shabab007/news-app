@@ -12,7 +12,6 @@ export const fetchNews = async (params: FetchNewsParams) => {
     category,
   })
   const url = process.env.NEXT_PUBLIC_API_URL + `top-headlines?${queryStr}`
-  console.log(url)
   const response = await fetch(url)
   const data = await response.json()
 

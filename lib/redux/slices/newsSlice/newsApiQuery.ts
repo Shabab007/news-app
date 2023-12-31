@@ -17,7 +17,6 @@ export const NewsApi = createApi({
           pageSize,
           category,
         })
-        console.log(queryStr)
         return {
           url: `top-headlines?${queryStr}`,
           method: 'GET',
