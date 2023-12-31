@@ -13,6 +13,7 @@ export default function CategoryTabs(props: Props) {
   return (
     <Box sx={{ width: '100%' }}>
       <Tabs
+        orientation='vertical'
         onChange={handleChange}
         value={value}
         aria-label='Tabs where each tab needs to be selected manually'

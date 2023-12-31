@@ -6,7 +6,7 @@ Check out the documentation below to get started.
 
 ## Examples V1
 
-<img width="1800" alt="Screenshot 2023-12-31 at 2 54 30 PM" src="https://github.com/Shabab007/news-app/assets/90137571/74e27398-434b-4c68-a57f-2f639e5b3a19">
+<img width="1800" alt="Screenshot 2023-12-31 at 4 03 17 PM" src="https://github.com/Shabab007/news-app/assets/90137571/e4f65066-b838-44d1-b93f-786e376273ab">
 
 ## Features
 
@@ -28,6 +28,8 @@ Check out the documentation below to get started.
 
 ```
 git clone https://github.com/Shabab007/news-app.git
+
+cd news-app
 ```
 
 2. Install Nodejs atlease 18.0.x or above and npm to run the project here is the [link.](https://nodejs.org/en)
