@@ -19,7 +19,7 @@ const MotionCard = (props: MotionCardProps) => {
       variants={variants}
       animate='visible'
       transition={{
-        delay: index ? index * 0.1 : 1,
+        delay: index ? index * 0.1 : 0.1,
         ease: 'easeInOut',
         duration: '.5',
       }}
