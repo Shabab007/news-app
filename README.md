@@ -1,29 +1,82 @@
-# Redux Toolkit TypeScript Example
+# InsideNews App
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+This is a [Next.js](https://nextjs.org/), [Material Ui](https://mui.com/material-ui/),[Redux Toolkit][https://redux-toolkit.js.org/] news fetching app. Version 1 is based on Next App 14 directory with [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) and uses [Framer motion](https://www.framer.com/motion/) to add animation in displaying card.
 
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+Check out the documentation below to get started.
 
-## Deploy your own
+## Examples V1
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+- Next.js with Typescript
+- [Material Ui](https://mui.com/material-ui/) to diplay the ui components
+- Easy styling customization with Css and primary color attribute
+- [Redux Toolkit][https://redux-toolkit.js.org/] for manging the state
+- Card animation render with [Framer motion](https://www.framer.com/motion/)
+- Infinite scroll functionlity with implemnting [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) package
+- SearchBar with debounce effiecient searching
+- Categorywise and searchwise data fetching
+- Category tab to choose between news category
+- Read later section to read any news later and remove functionlaity
+- Fully responsive
 
-## How to use
+## Quick Start Guide
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+1. Clone the repo
 
-```bash
-npx create-next-app --example with-redux with-redux-app
+```
+git clone https://github.com/Shabab007/news-app.git
 ```
 
-```bash
-yarn create next-app --example with-redux with-redux-app
+2. Install Nodejs atlease 18.0.x or above and npm to run the project here is the [link.](https://nodejs.org/en)
+
+3. Create an account in (news api)[https://newsapi.org/] to get api key or you can use this key `9835b92ee42f465b887f1b62da3fbb57`. Remeber there is limit to call this free api. You need to change the api key if the limit exceeds to continue using the app
+4. create .env.local file in root directory and adde two variables
+
+```
+NEXT_PUBLIC_API_URL="https://newsapi.org/v2/"
+NEXT_PUBLIC_API_KEY="9835b92ee42f465b887f1b62da3fbb57" //or you own api key created on new api
 ```
 
+## Installation
+
 ```bash
-pnpm create next-app --example with-redux with-redux-app
+nmp i
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Development
+
+First, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Edit the layout in `app` or content in `data`. With live reloading, the pages auto-updates as you edit them.
+x
+
+## Deploy
+
+**Vercel**  
+The easiest way to deploy the template is to deploy on [Vercel](https://vercel.com). Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+**Netlify**
+[Netlify](https://www.netlify.com/)’s Next.js runtime configures enables key Next.js functionality on your website without the need for additional configurations. Netlify generates serverless functions that will handle Next.js functionalities such as server-side rendered (SSR) pages, incremental static regeneration (ISR), `next/images`, etc.
+
+See [Next.js on Netlify](https://docs.netlify.com/integrations/frameworks/next-js/overview/#next-js-runtime) for suggested configuration values and more details.
+
+**Static hosting services / GitHub Pages / S3 / Firebase etc.**
+
+1. Add `output: 'export'` in `next.config.js`. See [static exports documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#configuration) for more information.
+2. Comment out `headers()` from `next.config.js`.
+3. Add `unoptimized: true` to the `images` key in `next.config.js`:
+
+   Alternatively, to continue using `next/image`, you can use an alternative image optimization provider such as Imgix, Cloudinary or Akamai. See [image optimization documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#image-optimization) for more details.
+
+4. Remove `api` folder and components which call the server-side function such as the Newsletter component. Not technically required and the site will build successfully, but the APIs cannot be used as they are server-side functions.
+5. Run `npm run build`. The generated static content is in the `out` folder.
+6. Deploy the `out` folder to your hosting service of choice or run `npx serve out` to view the website locally.
+
+**Note**: Deploying on Github pages require addition modifications to the base path. Please refer to the FAQ for more information.
