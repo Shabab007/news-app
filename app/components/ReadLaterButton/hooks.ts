@@ -21,10 +21,8 @@ const useReadLater = (news: Articles) => {
     e.stopPropagation()
     if (isInReadLaterList) {
       dispatch(readLaterNewsRemove(isInReadLaterList))
-      // setReadLater(false)
     } else {
       dispatch(readLaterNewsAdd(news))
-      // setReadLater(true)
     }
   }
   return { handleClick, readLater }
