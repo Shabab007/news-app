@@ -1,22 +1,11 @@
 'use client'
 import { Articles } from '@/lib/redux/slices/newsSlice/types'
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Grid,
-  Stack,
-  Typography,
-} from '@mui/material'
+import { Grid } from '@mui/material'
 import React, { useState } from 'react'
 import NewsCard from '../NewsCard/NewsCard'
 import { Porps } from './types'
 import useSelectNews from './hooks'
 import CustomModal from '../Modal/CustomModal'
-import { Close } from '@mui/icons-material'
-import NewsDetails from '../NewsDetails/NewsDetails'
 import ModalContent from '../ModalContent/ModalContent'
 
 const NewsMapper = (props: Porps) => {
@@ -41,8 +30,8 @@ const NewsMapper = (props: Porps) => {
             xs={12}
             sm={11.5}
             md={5.5}
-            lg={5.5}
-            xl={3.5}
+            lg={2.5}
+            xl={2.5}
             onClick={() => handleCard(item)}
           >
             <NewsCard index={index} news={item} />

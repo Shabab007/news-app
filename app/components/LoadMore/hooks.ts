@@ -1,12 +1,13 @@
 import { fetchNews } from '@/app/actions/news/news'
 import { useSelector } from '@/lib/redux'
 import { selectSearchInput, selectedCategory } from '@/lib/redux/slices/newsSlice'
+import { Articles } from '@/lib/redux/slices/newsSlice/types'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const useLoadMore = () => {
   const { ref, inView } = useInView()
-  const [data, setData] = useState<any>([])
+  const [data, setData] = useState<Articles[] | []>([])
   const [page, setPage] = useState(2)
   const [end, setEnd] = useState(false)
   const searchInput = useSelector(selectSearchInput)
