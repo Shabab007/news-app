@@ -18,5 +18,6 @@ export default function IndexPage() {
 }
 
 export const metadata = {
-  title: 'News App',
+  title: 'InsideNews',
+  descriptip: 'News fetching app',
 }

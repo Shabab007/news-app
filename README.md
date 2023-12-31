@@ -6,6 +6,8 @@ Check out the documentation below to get started.
 
 ## Examples V1
 
+<img width="1800" alt="Screenshot 2023-12-31 at 2 54 30 PM" src="https://github.com/Shabab007/news-app/assets/90137571/74e27398-434b-4c68-a57f-2f639e5b3a19">
+
 ## Features
 
 - Next.js with Typescript
