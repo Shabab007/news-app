@@ -27,7 +27,7 @@ const NewsListContainer = () => {
   const { loading, data } = useLoadMore()
 
   return (
-    <Stack alignItems={'center'} spacing={1}>
+    <Stack alignItems={'center'} spacing={1} width={'100%'}>
       <Grid container gap={2} justifyContent={'center'} padding={2}>
         <NewsMapper data={data} />
       </Grid>
